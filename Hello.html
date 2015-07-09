@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-    <h1>
+    <head>
+        <meta charset="UTF-8">
+        <title>Example</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+    </head>
+    <body>
+        <form id="Formularz">
+            <fieldset>
+                <legend>dx</legend>
+                <input type="text" value="" id="dx">
+                <input type="submit" value="Update" id="submitButtonDx">
+            </fieldset>
+
+            <fieldset>
+                <legend>dy</legend>
+                <input type="text" value="">
+                <input type="submit" value="Update" id="submitButtonDy">
+            </fieldset>
+        </form>
+
+
         <script src="script.js"></script>
-    </h1>
-</body>
+
+        <div id="container" style="width:100%; height:400px;"></div>
+
+
+
+    </body>
 </html>

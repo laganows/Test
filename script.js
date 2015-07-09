@@ -1,5 +1,68 @@
-/**
- * Created by Grzegorz_user on 2015-07-08.
- */
+var dx = 2
+var dy = 1
 
-document.write("Witaj swieie")
+
+$("input#submitButtonDx").click(function(){
+    var valueToCheck = document.getElementById("dx").value;
+    var naturalNumbersPattern = /^[1-9][0-9]*$/
+    var realNumbersPattern = /^[0-9]+[.][0-9]*$/
+    if (realNumbersPattern.test(valueToCheck) || naturalNumbersPattern.test(valueToCheck)) {
+        dx = valueToCheck
+        alert("Good number");
+        return
+    } else {
+        alert("Wrong number");
+        return
+    }
+
+
+});
+
+$("input#submitButtonDy").click(function(){
+    alert("button");
+});
+
+
+
+$(function () {
+    $('#container').highcharts({
+        title: {
+            text: 'Chart',
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Source: Example data',
+            x: -20
+        },
+        xAxis: {
+            title: {
+                text: 'x'
+            },
+            tickInterval: dx,
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        yAxis: {
+            title: {
+                text: 'y'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            data: [[5, 2], [6, 3], [8, 2], [9, 4]]
+        }]
+    });
+});
