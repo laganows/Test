@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <title>Example</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://code.highcharts.com/highcharts.js"></script>
     </head>
+
     <body>
-        <form id="Formularz">
+
+        <form id="form">
             <fieldset>
                 <legend>dx</legend>
                 <input type="text" value="" id="dx">
-                <input type="submit" value="Update" id="submitButtonDx">
+                <input type="button" name="button" value="Update" id ="xButton" onClick="updateX()">
             </fieldset>
 
             <fieldset>
                 <legend>dy</legend>
-                <input type="text" value="">
-                <input type="submit" value="Update" id="submitButtonDy">
+                <input type="text" value="" id="dy">
+                <input type="button" name="button" value="Update" id ="yButton" onClick="updateY()">
             </fieldset>
         </form>
 
-
-        <script src="script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
 
         <div id="container" style="width:100%; height:400px;"></div>
 
-
-
     </body>
+
 </html>
