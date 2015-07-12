@@ -6,6 +6,7 @@
         <title>Example</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="jquery-csv.js"></script>
     </head>
 
     <body>
@@ -21,6 +22,12 @@
                 <legend>dy</legend>
                 <input type="text" value="" id="dy">
                 <input type="button" name="button" value="Update" id ="yButton" onClick="updateY()">
+            </fieldset>
+
+            <fieldset>
+                <legend>dy</legend>
+                <input type="text" value="" id="fileName">
+                <input type="button" name="button" value="Update" id ="fileUpload" onClick="readTextFile()">
             </fieldset>
         </form>
 
