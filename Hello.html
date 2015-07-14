@@ -6,29 +6,51 @@
         <title>Example</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://code.highcharts.com/highcharts.js"></script>
-        <script src="jquery-csv.js"></script>
     </head>
 
     <body>
 
+        <input type="file" id="files"/>
+
         <form id="form">
             <fieldset>
-                <legend>dx</legend>
-                <input type="text" value="" id="dx">
+                <legend>Ox</legend>
+                dx: <input type="text" value="" id="dx">
+                from: <input type="text" value="" id="fromX">
+                to: <input type="text" value="" id="toX">
+                <select id="presicionSelectDx">
+                    <option value="0"></option>
+                    <option value="1">deca [da]</option>
+                    <option value="2">hecto [h]</option>
+                    <option value="3">kilo [k]</option>
+                    <option value="6">mega [M]</option>
+                    <option value="9">giga [G]</option>
+                    <option value="12">tera [T]</option>
+                    <option value="15">peta [P]</option>
+                    <option value="18">exa [E]</option>
+                </select>
                 <input type="button" name="button" value="Update" id ="xButton" onClick="updateX()">
             </fieldset>
 
             <fieldset>
-                <legend>dy</legend>
-                <input type="text" value="" id="dy">
+                <legend>Oy</legend>
+                dy: <input type="text" value="" id="dy">
+                from: <input type="text" value="" id="fromY">
+                to: <input type="text" value="" id="toY">
+                <select id="presicionSelectDy">
+                    <option value="0"></option>
+                    <option value="1">deca [da]</option>
+                    <option value="2">hecto [h]</option>
+                    <option value="3">kilo [k]</option>
+                    <option value="6">mega [M]</option>
+                    <option value="9">giga [G]</option>
+                    <option value="12">tera [T]</option>
+                    <option value="15">peta [P]</option>
+                    <option value="18">exa [E]</option>
+                </select>
                 <input type="button" name="button" value="Update" id ="yButton" onClick="updateY()">
             </fieldset>
 
-            <fieldset>
-                <legend>dy</legend>
-                <input type="text" value="" id="fileName">
-                <input type="button" name="button" value="Update" id ="fileUpload" onClick="readTextFile()">
-            </fieldset>
         </form>
 
         <script type="text/javascript" src="script.js"></script>
